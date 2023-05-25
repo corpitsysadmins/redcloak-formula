@@ -1,4 +1,5 @@
-{%- from "./defaults/map.jinja" import redcloak with context -%}
+{%- set default_sources = {'module' : 'redcloak', 'pillar' : True, 'grains' : ['os_family']} %}
+{%- from "./defaults/load_config.jinja" import config as redcloak with context %}
 
 {% if redcloak.use is defined %}
 
